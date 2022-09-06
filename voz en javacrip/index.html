@@ -1,0 +1,33 @@
+<html>
+    
+<head>RECONOCIMIENTO DE VOZ</head>
+<body>
+
+<script>
+
+const recongnition = new webkitSpeechRecognition()
+recongnition.lang = "es-ES"
+recongnition.continuous = true
+recongnition.onresult = event => {
+    for(const result of event.results){
+        console.log(result[0].transcript)
+    }
+}
+
+recongnition.star()
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>
